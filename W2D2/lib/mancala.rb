@@ -2,7 +2,7 @@ require_relative 'board'
 require_relative 'player'
 
 class Mancala
-  def initialize(name1, name2)
+  def initialize(name1 = "Jim", name2 = "Flynn")
     @player1 = Player.new(name1, 1)
     @player2 = Player.new(name2, 2)
     @board = Board.new(name1, name2)
@@ -61,4 +61,8 @@ class Mancala
     puts "12  11  10   9   8   7"
     puts " 1   2   3   4   5   6"
   end
+end
+
+if __FILE__ == $PROGRAM_NAME
+  Mancala.new.play
 end
