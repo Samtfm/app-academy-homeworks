@@ -16,7 +16,8 @@ class Board
   end
 
   def valid_move?(start_pos)
-    unless start_pos.between?(0,6) || start_pos.between?(7,12)
+    puts start_pos
+    unless start_pos.between?(1,6) || start_pos.between?(7,12)
       raise "Invalid starting cup"
     end
   end
